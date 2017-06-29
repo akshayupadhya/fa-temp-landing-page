@@ -1,0 +1,19 @@
+mixin box(name,url)
+    li.social.center-block.col-xs-6.col-sm-3.col-md-2
+        .link
+            a(href=url)
+                div(class=name)
+                h3.social-name=name
+     
+        
+     
+  
+.container.main1
+    h2.header  Thanks for contacting us, we will get back to you soon
+    h3.stay Stay in touch.........
+    br
+    ul.row.boxes
+        +box("facebook","https://www.facebook.com/foreaviation/")
+        +box("twitter","https://twitter.com/ForeAviation/")
+        +box("linkedIn","https://www.linkedin.com/organization/13271756/admin/updates") 
+        +box("instagram","https://www.instagram.com/foreaviation/?hl=en")

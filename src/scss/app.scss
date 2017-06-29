@@ -1,0 +1,86 @@
+@import 'background';
+@import 'textbox';
+
+//html
+*{
+    padding: 0;
+    margin: o;
+}
+body{
+    height: 100vh;
+}
+   
+   //media queries
+    @media only screen and (min-width : 320px) {
+        .main{
+            padding-top: 5%;
+        }
+        .box{
+            width: 98%;
+            padding: 3%;
+            .form-control{
+                width:90%;
+                }
+              }
+    }
+
+    /* Extra Small Devices, Phones */ 
+    @media only screen and (min-width : 420px) {
+.main{
+            padding-top: 5%;
+        }
+        .box{
+            width: 90%;
+            padding: 2%;
+            .form-control{
+                width:92%;
+                }
+              }
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (min-width : 768px) {
+         .main{
+            padding-top: 12%;
+        }
+        .box{
+            width: 50%;
+            padding: 2%;
+            .form-control{
+                width:90%;
+                }
+              }
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (min-width : 992px) {
+         .main{
+            padding-top: 15%;
+            padding-inline-start: 10%;
+        }
+        .box{
+            width: 40%;
+            padding: 2%;
+            .form-control{
+                width:95%;
+                }
+              }
+    }
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (min-width : 1200px) {
+        .main{
+            padding-top: 10%;
+            padding-left: 150px !important;
+           
+           
+        }
+        .box{
+            width: 40%;
+            padding: 2%;
+            .form-control{
+                width:98%;
+                }
+              }
+    }
+

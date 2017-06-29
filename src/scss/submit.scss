@@ -1,0 +1,87 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+@mixin back-img($img){
+    background-image: url('../images/'+$img);
+    height: 100px;
+    width:150px;
+}
+.main1{
+    transform: scale(0.96);
+    width:100%;
+   // border: 1px solid black;
+    height: 99vh;
+    position: absolute;
+    top: 0;
+    z-index: 100;
+}.header{
+     color: whitesmoke;
+}.stay{
+    text-align: center;
+    font-size: 2em;
+    color: whitesmoke;
+}
+ .link{
+       //media queries
+        width: 98%;
+        padding: 1%;
+       a:hover, a:active, a:visited{
+            text-decoration: none;
+        }
+   }.link:hover,.link:active{
+       // border: solid 1px #CCC;
+   
+        box-shadow: 5px 5px 0px #999;
+        }
+ 
+
+.facebook{
+     @include back-img('facebook.png');
+}.twitter{
+     @include back-img('twitter.png');
+}.linkedIn{
+     @include back-img('linkedIn.png');
+}
+.instagram{
+     @include back-img('instagram.png');
+}
+
+    
+
+//media queries
+/* Custom, iPhone Retina */ 
+    @media only screen and (min-width : 320px) {
+        .header{
+    padding-left: 3%;
+    padding-right: 3%;
+   
+}
+    }.boxes{
+             transform:scale(.75);
+        }
+
+    /* Extra Small Devices, Phones */ 
+    @media only screen and (min-width : 480px) {
+
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (min-width : 768px) {
+        .header{
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 20%
+}
+    }
+
+    /* Medium Devices, Desktops */
+   
+    /* Large Devices, Wide Screens */
+    @media only screen and (min-width : 1020px) {
+.main1{
+            padding-left: 15%!important;
+        }
+    }
+
+

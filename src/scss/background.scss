@@ -1,0 +1,39 @@
+.background{
+    z-index: 7;
+    height: 100vh;
+    display: flex;
+    
+   
+}
+.back-div{
+    width: 50%;
+    height: 100vh;
+    
+}
+.second{
+
+    height:50%;
+    opacity: .6;
+    
+}.one{
+    background-image: url('../images/aircraft-513641_640.jpg');
+}.three{
+    background-image: url('../images/airport-1853505_640.jpg');
+}.two{
+    background-image: url('../images/airport-2384837_1920.jpg');
+}.four{
+    background-image: url('../images/cockpit-924952_640.jpg');
+}
+
+
+//black-div
+.black-div{
+    height:100vh;
+    background-color: #000;
+    opacity: 1;
+    z-index: 3;
+   position: relative;
+   opacity: .8;
+    top:-100vh;
+}
+  

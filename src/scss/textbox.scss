@@ -1,0 +1,44 @@
+.textbox-div{
+   z-index: 10;
+    height: 100vh;
+    
+    position: absolute;
+    top: 0px;
+    
+    
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    ul{
+        li{
+            list-style: none;
+        }
+    }
+}
+.title-box{
+    
+    text-align: center;
+    .title{
+        size:2em;
+        color: #f2f2f2;
+        span{
+            color: cornflowerblue;
+        }
+        
+    }
+}
+.caption{
+            color: #f2f2f2;
+        }
+.box{
+    color: #f2f2f2;
+    background-color:#0d0d0d;
+    opacity: .95;
+    text-align: center;
+   
+    button{
+        width: 99%;
+        padding:15px;
+    }
+}
