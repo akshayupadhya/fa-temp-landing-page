@@ -27,6 +27,7 @@ module.exports={
         use: ExtractTextPlugin.extract({fallback: 'style-loader', use: ['css-loader', 'sass-loader']})
        
     },{ test: /\.pug$/,use:['html-loader','pug-html-loader']},
+    { test: /\.html$/,use:['html-loader']},
     { test: /\.(jpeg|jpg|gif|png|svg)/,use:[
         'file-loader?name=images/[name].[ext]&Publicpath=./dist/',
         'image-webpack-loader'

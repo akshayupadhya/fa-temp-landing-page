@@ -28,7 +28,7 @@ router.get('/con',(req,res,next)=>{
   res.json(data);
   let text= "<h1>New message</h1><h2>"+ data.name +" says:</h2><p>"+ data.message +"</p><h3>details</h3><ul><h4>contact number</h4><a href=tel:'"+ data.contactnumber+"'>"+ data.contactnumber +"</a></br><h4>email</h4><a href=mailto:'"+ data.email+"'>"+ data.email +"</a></ul>";
   var mailOptions={
-        to : "foreaviation@outlook.com",
+        to : "akshaysrinagar@gmail.com",
         subject : "New message",
         html : text
     }

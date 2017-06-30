@@ -1,1 +1,123 @@
-.background{z-index:7;height:100vh;display:flex}.back-div{width:50%;height:100vh}.second{height:50%;opacity:.6}.one{background-image:url(images/aircraft-513641_640.jpg)}.three{background-image:url(images/airport-1853505_640.jpg)}.two{background-image:url(images/airport-2384837_1920.jpg)}.four{background-image:url(images/cockpit-924952_640.jpg)}.black-div{height:100vh;background-color:#000;opacity:1;z-index:3;position:relative;opacity:.8;top:-100vh}.textbox-div{z-index:10;height:100vh;position:absolute;top:0}.main{display:flex;flex-direction:column}.main ul li{list-style:none}.title-box{text-align:center}.title-box .title{size:2em;color:#f2f2f2}.title-box .title span{color:#6495ed}.box,.caption{color:#f2f2f2}.box{background-color:#0d0d0d;opacity:.95;text-align:center}.box button{width:99%;padding:15px}*{padding:0;margin:o}body{height:100vh}@media only screen and (min-width:320px){.main{padding-top:5%}.box{width:98%;padding:3%}.box .form-control{width:90%}}@media only screen and (min-width:420px){.main{padding-top:5%}.box{width:90%;padding:2%}.box .form-control{width:92%}}@media only screen and (min-width:768px){.main{padding-top:12%}.box{width:50%;padding:2%}.box .form-control{width:90%}}@media only screen and (min-width:992px){.main{padding-top:15%;padding-inline-start:10%}.box{width:40%;padding:2%}.box .form-control{width:95%}}@media only screen and (min-width:1200px){.main{padding-top:10%;padding-left:150px!important}.box{width:40%;padding:2%}.box .form-control{width:98%}}
+.background {
+  z-index: 7;
+  height: 100vh;
+  display: flex; }
+
+.back-div {
+  width: 50%;
+  height: 100vh; }
+
+.second {
+  height: 50%;
+  opacity: .6; }
+
+.one {
+  background-image: url(images/aircraft-513641_640.jpg); }
+
+.three {
+  background-image: url(images/airport-1853505_640.jpg); }
+
+.two {
+  background-image: url(images/airport-2384837_1920.jpg); }
+
+.four {
+  background-image: url(images/cockpit-924952_640.jpg); }
+
+.black-div {
+  height: 100vh;
+  background-color: #000;
+  opacity: 1;
+  z-index: 3;
+  position: relative;
+  opacity: .8;
+  top: -100vh; }
+
+.textbox-div {
+  z-index: 10;
+  height: 100vh;
+  position: absolute;
+  top: 0px; }
+
+.main {
+  display: flex;
+  flex-direction: column; }
+  .main ul li {
+    list-style: none; }
+
+.title-box {
+  text-align: center; }
+  .title-box .title {
+    size: 2em;
+    color: #f2f2f2; }
+    .title-box .title span {
+      color: cornflowerblue; }
+
+.caption {
+  color: #f2f2f2; }
+
+.box {
+  color: #f2f2f2;
+  background-color: #0d0d0d;
+  opacity: .95;
+  text-align: center; }
+  .box button {
+    width: 99%;
+    padding: 15px; }
+
+* {
+  padding: 0;
+  margin: o; }
+
+body {
+  height: 100vh; }
+
+@media only screen and (min-width: 320px) {
+  .main {
+    padding-top: 5%; }
+  .box {
+    width: 98%;
+    padding: 3%; }
+    .box .form-control {
+      width: 90%; } }
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width: 420px) {
+  .main {
+    padding-top: 5%; }
+  .box {
+    width: 90%;
+    padding: 2%; }
+    .box .form-control {
+      width: 92%; } }
+
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px) {
+  .main {
+    padding-top: 12%; }
+  .box {
+    width: 50%;
+    padding: 2%; }
+    .box .form-control {
+      width: 90%; } }
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width: 992px) {
+  .main {
+    padding-top: 15%;
+    padding-inline-start: 10%; }
+  .box {
+    width: 40%;
+    padding: 2%; }
+    .box .form-control {
+      width: 95%; } }
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 1200px) {
+  .main {
+    padding-top: 10%;
+    padding-left: 150px !important; }
+  .box {
+    width: 40%;
+    padding: 2%; }
+    .box .form-control {
+      width: 98%; } }
