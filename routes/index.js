@@ -1,19 +1,29 @@
 var express = require('express');
 let bodyParser = require('body-parser');
 var nodemailer = require("nodemailer");
+var xoauth2 = require("xoauth2")
 var router = express.Router();
 var jsonParser = bodyParser.json()
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 let data={};
 //mailer details
-var smtpTransport = nodemailer.createTransport({
+let generator =xoauth2.createXOAuth2Generator({
+        
+    });
+    console.log(generator);
+var transporter = nodemailer.createTransport({
     service: "gmail",
     host: "smtp.gmail.com",
     auth: {
+        type : 'OAuth2',
         user: "foreaviation@gmail.com",
-        pass: "Foreaviation@2017"
-    }
+        pass:'Foreaviation@2017',
+        clientId: '359350323331-c3jap7v0v7sdar843sochrq92vmom4cu.apps.googleusercontent.com',
+        clientSecret: 'hZmciEAFiCVafQFJFBW24vfK',
+        refreshToken: '1/fD4OkF7N_aV8S1wvG6535UD1S9gQZwYudjPtGnbY87U',
+        accessToken:'ya29.Glt5BK6TuS53JUCznQZkXofU2lz6vHzfIpuU5xMYp0o_QotVeGehOrMgjJzX85xxt9q_JurYN6Fh2Kq1mnBldzjBC5FRE5DjCL0bFkeCNLzU7gU0e4XE-VFeYaRx',
+    },
 });
 /* GET home page. */
 
@@ -28,12 +38,12 @@ router.get('/con',(req,res,next)=>{
   res.json(data);
   let text= "<h1>New message</h1><h2>"+ data.name +" says:</h2><p>"+ data.message +"</p><h3>details</h3><ul><h4>contact number</h4><a href=tel:'"+ data.contactnumber+"'>"+ data.contactnumber +"</a></br><h4>email</h4><a href=mailto:'"+ data.email+"'>"+ data.email +"</a></ul>";
   var mailOptions={
-        to : "akshaysrinagar@gmail.com",
+        to : "foreaviation@outlook.com",
         subject : "New message",
         html : text
     }
     console.log(mailOptions);
-smtpTransport.sendMail(mailOptions, function(error, response){
+transporter.sendMail(mailOptions, function(error, response){
 if(error){
 console.log(error);
 res.end("error");
