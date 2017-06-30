@@ -15,11 +15,11 @@ var transporter = nodemailer.createTransport({
     auth: {
         type : 'OAuth2',
         user: "foreaviation@gmail.com",
-       
+
         clientId: '359350323331-c3jap7v0v7sdar843sochrq92vmom4cu.apps.googleusercontent.com',
         clientSecret: 'hZmciEAFiCVafQFJFBW24vfK',
         refreshToken: '1/fD4OkF7N_aV8S1wvG6535UD1S9gQZwYudjPtGnbY87U',
-        
+
     },
 });
 /* GET home page. */
@@ -40,15 +40,15 @@ router.get('/con',(req,res,next)=>{
         html : text
     }
     console.log(mailOptions);
-transporter.sendMail(mailOptions, function(error, response){
-if(error){
-console.log(error);
-res.end("error");
-}else{
-console.log("Message sent: " + response.message);
-res.end("sent");
-}
-});
+   transporter.sendMail(mailOptions, function(error, response){
+    if(error){
+    console.log(error);
+    res.end("error");
+    }else{
+    console.log("Message sent: " + response.message);
+    res.end("sent");
+    }
+    });
 });
 
 router.get('/contact', function(req, res, next) {

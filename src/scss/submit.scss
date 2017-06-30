@@ -1,6 +1,13 @@
 *{
     padding: 0px;
     margin: 0px;
+    
+}
+body{
+    z-index: 0;
+    height: 99vh!important;
+   z-index: 1;
+   background-color: black;
 }
 @mixin back-img($img){
     background-image: url('../images/'+$img);
@@ -46,6 +53,9 @@
 .instagram{
      @include back-img('instagram.png');
 }
+.GooglePlus{
+     @include back-img('GooglePlus.png');
+}
 
     
 
@@ -58,7 +68,9 @@
    
 }
     }.boxes{
-             transform:scale(.75);
+            position: relative;
+            top:-10vh;
+             transform:scale(.7);
         }
 
     /* Extra Small Devices, Phones */ 

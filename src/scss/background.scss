@@ -1,9 +1,5 @@
 .background{
-    z-index: 7;
-    height: 100vh;
-    display: flex;
-    
-   
+    display: flex; 
 }
 .back-div{
     width: 50%;
@@ -26,14 +22,11 @@
 }
 
 
+
 //black-div
 .black-div{
-    height:100vh;
     background-color: #000;
-    opacity: 1;
-    z-index: 3;
-   position: relative;
-   opacity: .8;
-    top:-100vh;
-}
+   opacity: .9;
+   
+  }
   
