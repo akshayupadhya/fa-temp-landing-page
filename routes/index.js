@@ -8,10 +8,7 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 let data={};
 //mailer details
-let generator =xoauth2.createXOAuth2Generator({
-        
-    });
-    console.log(generator);
+
 var transporter = nodemailer.createTransport({
     service: "gmail",
     host: "smtp.gmail.com",
