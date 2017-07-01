@@ -54,4 +54,8 @@ router.get('/con',(req,res,next)=>{
 router.get('/contact', function(req, res, next) {
   res.sendfile('./dist/contact.html');
 });
+
+router.get('/.well-known/acme-challenge/:challenge',(req,res,next)=>{
+    res.send("Q5i3L3JZud9yZPwiQcVUt-RtjOFfEm3wY9pd7ls_ea8.S23Mp8apEbpHPu-EzdjsDT8Lt_IuHtdu07u5RLCltog");
+})
 module.exports = router;
