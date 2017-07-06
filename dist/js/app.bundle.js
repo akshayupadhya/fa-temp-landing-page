@@ -60,11 +60,148 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _app = __webpack_require__(12);
+
+var css = _interopRequireWildcard(_app);
+
+var _jquery = __webpack_require__(11);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+__webpack_require__(13);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+var submitDiv = '<style>.main1{-webkit-transform:scale(.96);transform:scale(.96);width:100%;height:99vh;position:absolute;top:0;z-index:100}.header,.stay{color:#f5f5f5}.stay{text-align:center;font-size:2em}.link{width:98%;padding:1%}.link a:active,.link a:hover,.link a:visited{text-decoration:none}.link:active,.link:hover{box-shadow:5px 5px 0 #999}@media only screen and (min-width:320px){.header{padding-top:28%;padding-left:3%;padding-right:3%}}.boxes{position:relative;top:-10vh;-webkit-transform:scale(.7);transform:scale(.7)}@media only screen and (min-width:768px){.header{padding-left:10%;padding-right:10%;padding-top:35%}}@media only screen and (min-width:1020px){.main1{padding-left:15%!important}}.hundred{height:100vh}.background{z-index:8}.black-div{position:relative;top:-100vh;z-index:12}.textbox-div{position:absolute;top:0;z-index:30}</style><div class="container main1"><h2 class=header> Thanks for contacting us, we will get back to you soon</h2></div>';
+(0, _jquery2.default)(function () {
+  function detectresiz() {
+    (0, _jquery2.default)(window).resize(function () {
+      if ((0, _jquery2.default)(window).height < 320) {
+        console.log("triggered");
+        (0, _jquery2.default)('.background .black-div').height(570).promise().done(function (e) {
+          console.log(e);
+        });
+      }
+    });
+  }
+
+  var height = (0, _jquery2.default)(window).height;
+  setInterval(function () {
+    //console.log("trigered");
+    //detectresize();
+    (0, _jquery2.default)(window).resize(function () {
+      if (height < 320) {
+        console.log("triggered");
+        (0, _jquery2.default)('.background .black-div').height(570).promise().done(function (e) {
+          console.log(e);
+        });
+      }
+    });
+  }, 500);
+
+  (0, _jquery2.default)("form[name='data']").validate({
+    // Specify validation rules
+    rules: {
+      // The key name on the left side is the name attribute
+      // of an input field. Validation rules are defined
+      // on the right side
+      name: "required",
+      contactnumber: "required",
+      message: "required",
+
+      email: {
+        required: true,
+        // Specify that email should be validated
+        // by the built-in "email" rule
+        email: true
+      }
+    },
+    // Specify validation error messages
+    messages: {
+      name: "Please enter your name",
+      contactnumber: "Please enter your contact number",
+      message: "Please enter your message",
+
+      email: "Please enter a valid email address"
+    }
+    // Make sure the form is submitted to the destination defined
+    // in the "action" attribute of the form when valid
+
+  });
+  console.log((0, _jquery2.default)('#message').val());
+  // process the form
+  (0, _jquery2.default)('.data').submit(function (event) {
+
+    // get the form data
+    // there are many ways to get this data using jQuery (you can use the class or id also)
+    var formData = {
+      'name': (0, _jquery2.default)('input[name=name]').val(),
+      'email': (0, _jquery2.default)('input[name=email]').val(),
+      'message': (0, _jquery2.default)('textarea#message').val(),
+      'contactnumber': (0, _jquery2.default)('input[name=contactnumber]').val()
+    };
+    console.log(formData);
+    var data = {};
+    //to check if the form submitted has any null values
+    if (!formData.name | !formData.email | !formData.message | !formData.contactnumber) {
+      console.log(!formData.name | !formData.email | !formData.message | !formData.contactnumber);
+    } else {
+      _jquery2.default.ajax({
+        type: 'POST', // define the type of HTTP verb we want to use (POST for our form)
+        url: '/', // the url where we want to POST
+        data: formData, // our data object
+        dataType: 'json', // what type of data do we expect back from the server
+        encode: true,
+        success: function success(retData) {
+          data = retData;
+          data.ret = true;
+          console.log(data);
+        }
+      }).done(function (e) {
+        console.log(e);
+        if (e.ret) {
+          (0, _jquery2.default)('.textbox-div').addClass("hidden").promise().done(function () {
+            (0, _jquery2.default)('.ChangeItHere').html(submitDiv);
+          });
+        }
+      });
+    }
+
+    // using the done promise callback
+
+
+    // stop the form from submitting the normal way and refreshing the page
+    event.preventDefault();
+    // return false;
+  });
+});
+
+//service worker
+
+/***/ }),
+/* 1 */,
+/* 2 */,
+/* 3 */,
+/* 4 */,
+/* 5 */,
+/* 6 */,
+/* 7 */,
+/* 8 */,
+/* 9 */,
+/* 10 */,
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -10324,115 +10461,13 @@ return jQuery;
 
 
 /***/ }),
-/* 1 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _app = __webpack_require__(2);
-
-var css = _interopRequireWildcard(_app);
-
-var _jquery = __webpack_require__(0);
-
-var _jquery2 = _interopRequireDefault(_jquery);
-
-__webpack_require__(3);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
-
-var submitDiv = '<style>.main1{-webkit-transform:scale(.96);transform:scale(.96);width:100%;height:99vh;position:absolute;top:0;z-index:100}.header,.stay{color:#f5f5f5}.stay{text-align:center;font-size:2em}.link{width:98%;padding:1%}.link a:active,.link a:hover,.link a:visited{text-decoration:none}.link:active,.link:hover{box-shadow:5px 5px 0 #999}@media only screen and (min-width:320px){.header{padding-top:28%;padding-left:3%;padding-right:3%}}.boxes{position:relative;top:-10vh;-webkit-transform:scale(.7);transform:scale(.7)}@media only screen and (min-width:768px){.header{padding-left:10%;padding-right:10%;padding-top:35%}}@media only screen and (min-width:1020px){.main1{padding-left:15%!important}}.hundred{height:100vh}.background{z-index:8}.black-div{position:relative;top:-100vh;z-index:12}.textbox-div{position:absolute;top:0;z-index:30}</style><div class="container main1"><h2 class=header> Thanks for contacting us, we will get back to you soon</h2></div>';
-(0, _jquery2.default)(function () {
-  (0, _jquery2.default)("form[name='data']").validate({
-    // Specify validation rules
-    rules: {
-      // The key name on the left side is the name attribute
-      // of an input field. Validation rules are defined
-      // on the right side
-      name: "required",
-      contactnumber: "required",
-      message: "required",
-
-      email: {
-        required: true,
-        // Specify that email should be validated
-        // by the built-in "email" rule
-        email: true
-      }
-    },
-    // Specify validation error messages
-    messages: {
-      name: "Please enter your name",
-      contactnumber: "Please enter your contact number",
-      message: "Please enter your message",
-
-      email: "Please enter a valid email address"
-    }
-    // Make sure the form is submitted to the destination defined
-    // in the "action" attribute of the form when valid
-
-  });
-  console.log((0, _jquery2.default)('#message').val());
-  // process the form
-  (0, _jquery2.default)('.data').submit(function (event) {
-
-    // get the form data
-    // there are many ways to get this data using jQuery (you can use the class or id also)
-    var formData = {
-      'name': (0, _jquery2.default)('input[name=name]').val(),
-      'email': (0, _jquery2.default)('input[name=email]').val(),
-      'message': (0, _jquery2.default)('textarea#message').val(),
-      'contactnumber': (0, _jquery2.default)('input[name=contactnumber]').val()
-    };
-    console.log(formData);
-    var data = {};
-    //to check if the form submitted has any null values
-    if (!formData.name | !formData.email | !formData.message | !formData.contactnumber) {
-      console.log(!formData.name | !formData.email | !formData.message | !formData.contactnumber);
-    } else {
-      _jquery2.default.ajax({
-        type: 'POST', // define the type of HTTP verb we want to use (POST for our form)
-        url: '/', // the url where we want to POST
-        data: formData, // our data object
-        dataType: 'json', // what type of data do we expect back from the server
-        encode: true,
-        success: function success(retData) {
-          data = retData;
-          data.ret = true;
-          console.log(data);
-        }
-      }).done(function (e) {
-        console.log(e);
-        if (e.ret) {
-          (0, _jquery2.default)('.textbox-div').addClass("hidden").promise().done(function () {
-            (0, _jquery2.default)('.ChangeItHere').html(submitDiv);
-          });
-        }
-      });
-    }
-
-    // using the done promise callback
-
-
-    // stop the form from submitting the normal way and refreshing the page
-    event.preventDefault();
-    // return false;
-  });
-});
-
-//service worker
-
-/***/ }),
-/* 2 */
+/* 12 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 3 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -10445,7 +10480,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
  */
 (function( factory ) {
 	if ( true ) {
-		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(0)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(11)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));

@@ -5,6 +5,33 @@ import 'jquery-validation';
 
 let submitDiv = '<style>.main1{-webkit-transform:scale(.96);transform:scale(.96);width:100%;height:99vh;position:absolute;top:0;z-index:100}.header,.stay{color:#f5f5f5}.stay{text-align:center;font-size:2em}.link{width:98%;padding:1%}.link a:active,.link a:hover,.link a:visited{text-decoration:none}.link:active,.link:hover{box-shadow:5px 5px 0 #999}@media only screen and (min-width:320px){.header{padding-top:28%;padding-left:3%;padding-right:3%}}.boxes{position:relative;top:-10vh;-webkit-transform:scale(.7);transform:scale(.7)}@media only screen and (min-width:768px){.header{padding-left:10%;padding-right:10%;padding-top:35%}}@media only screen and (min-width:1020px){.main1{padding-left:15%!important}}.hundred{height:100vh}.background{z-index:8}.black-div{position:relative;top:-100vh;z-index:12}.textbox-div{position:absolute;top:0;z-index:30}</style><div class="container main1"><h2 class=header> Thanks for contacting us, we will get back to you soon</h2></div>';
 $(()=>{
+   function detectresiz(){
+        $(window).resize(function () {
+                   if($(window).height<320){
+                     console.log("triggered");
+                      $('.background .black-div').height(570).
+                    promise().done(
+                      (e)=>{console.log(e)}
+                    );
+                   }
+            })
+    }
+    
+    let height =$(window).height;
+    setInterval(()=>{
+      //console.log("trigered");
+      //detectresize();
+      $(window).resize(function () {
+                   if(height<320){
+                     console.log("triggered");
+                      $('.background .black-div').height(570).
+                    promise().done(
+                      (e)=>{console.log(e)}
+                    );
+                   }
+            })
+    },500);
+    
      $("form[name='data']").validate({
     // Specify validation rules
     rules: {
