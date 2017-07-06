@@ -2,21 +2,23 @@
 @import 'background';
 @import 'textbox';
 @import 'footer';
+//@import 'fa/font-awesome'
 //html
 *{
     padding: 0;
     margin: 0;
 }
 body{
-    max-height: 110vh!important;
+    max-height: 100vh!important;
 }
 html{
-    height: 110vh;
+    height: 100vh;
 }
    //media queries
     @media only screen and (min-width : 320px) {
         .main{
             padding-top: 5%;
+            transform: scale(0.85);
         }
         .box{
             width: 98%;
@@ -31,6 +33,7 @@ html{
     @media only screen and (min-width : 420px) {
 .main{
             padding-top: 5%;
+             transform: scale(0.87);
         }
         .box{
             width: 90%;
@@ -45,6 +48,7 @@ html{
     @media only screen and (min-width : 768px) {
          .main{
             padding-top: 12%;
+             transform: scale(0.9);
         }
         .box{
             width: 50%;
@@ -60,6 +64,7 @@ html{
          .main{
             padding-top: 15%;
             padding-inline-start: 10%;
+             transform: scale(0.95);
         }
         .box{
             width: 40%;
@@ -75,7 +80,7 @@ html{
         .main{
             padding-top: 10%;
             padding-left: 150px !important;
-           
+            transform: scale(1.2);
            
         }
         .box{

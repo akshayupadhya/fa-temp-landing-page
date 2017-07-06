@@ -24,7 +24,7 @@ module.exports={
     
       {
         test: /\.scss$/,
-        use: ExtractTextPlugin.extract({fallback: 'style-loader', use: ['css-loader', 'sass-loader']})
+        use: ExtractTextPlugin.extract({fallback: 'style-loader', use: ['css-loader','postcss-loader', 'sass-loader']})
        
     },{ test: /\.pug$/,use:['html-loader','pug-html-loader']},
     { test: /\.html$/,use:['html-loader']},
@@ -39,14 +39,12 @@ module.exports={
     plugins:[
        new HtmlWebpackPlugin({
             title: 'project demo',
-            hash:true,
             chunks:['app'],
             template: `${srcDir}/index.pug` 
   }),new HtmlWebpackPlugin({
             title: 'contact page',
             filename:'contact.html',
             chunks:['contact'],
-            hash:true,
             template: `${srcDir}/contact.pug` 
   }), new ExtractTextPlugin('[name].css'),
   

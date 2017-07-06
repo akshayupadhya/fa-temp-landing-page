@@ -1,3 +1,19 @@
+mixin icon(name,url)
+    li.text-center(style="")
+       a(class=name,href=url)
+            i.fa(class="fa-"+name) 
+                
+
+
 .footer
-    .container
-        p.pull-right &copy ForeAviation
+    .container.social-icons.center.center-block.centered(style="width=100%")
+        .pull-left.row
+            ul.list-inline.row
+                h4 Stay In Touch
+                +icon("facebook","https://www.facebook.com/foreaviation/")
+                +icon("twitter","https://twitter.com/ForeAviation/")
+                +icon("linkedin","https://www.linkedin.com/organization/13271756/admin/updates") 
+                +icon("instagram","https://www.instagram.com/foreaviation/?hl=en")
+                +icon("google-plus","https://plus.google.com/116421598672685831761")
+        .pull-right.row
+            p.copy.pull-right designed and developed </br> ForeAviation Pvt Ltd </br>&copy ForeAviation

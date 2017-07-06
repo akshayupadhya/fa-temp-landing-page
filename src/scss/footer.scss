@@ -1,9 +1,40 @@
 .footer{
     background-color: black!important;
-    border: 1px solid black;
+    //border: 1px solid black;
     width: 100%;
-    height: 10vh;
-    color: whitesmoke;
+    height: 12vh;
+    color:wheat;
     position: absolute;
-    top:100vh;  
+    top:88vh;
+    z-index: 1000;  
+}
+.social-icons{
+   // border: 1px solid blueviolet;
+    //margin-right: 40%;
+    ul{
+        margin-top:-2%;
+        transform: scale(0.7);
+//        width: 125%;
+        height: 32px!important;
+        li{
+            text-align: center;
+            margin: 4px;
+            color: whitesmoke;
+            //background:whitesmoke;
+            border-radius:2px; 
+            height:32px; width: 32px;
+            font-size: 30px;
+            padding: 0px 1px ;
+            //border: 1px solid black;
+        }
+    }
+}
+ @media only screen and (min-width : 320px) {
+       .copy{
+           //pull-right();
+           //border: 1px solid blue;
+          // position: relative;
+           //top:-5vh;
+       }
+   
 }
