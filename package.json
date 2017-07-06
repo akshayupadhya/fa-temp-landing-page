@@ -6,6 +6,7 @@
     "start": "node ./bin/www",
     "dev": "nodemon ./bin/www",
     "build": " webpack -p",
+    "clean": "rimraf ./dist/*"
   },
   "dependencies": {
     "body-parser": "~1.17.1",
@@ -22,6 +23,7 @@
     "xoauth2": "^1.2.0"
   },
   "devDependencies": {
+    "nodemon": "^1.11.0",
     "babel": "^6.23.0",
     "babel-core": "^6.25.0",
     "babel-loader": "^7.1.0",
@@ -40,7 +42,6 @@
     "jquery": "^3.2.1",
     "jquery-validation": "^1.16.0",
     "node-sass": "^4.5.3",
-    "nodemon": "^1.11.0",
     "postcss-loader": "^2.0.6",
     "pug-html-loader": "^1.1.5",
     "resolve-url-loader": "^2.0.3",
