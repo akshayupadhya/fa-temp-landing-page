@@ -6,7 +6,6 @@
     "start": "node ./bin/www",
     "dev": "nodemon ./bin/www",
     "build": " webpack -p",
-    //"clean": "rimraf ./dist/*"
   },
   "dependencies": {
     "body-parser": "~1.17.1",
