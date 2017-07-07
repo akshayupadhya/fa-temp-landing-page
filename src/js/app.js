@@ -1,4 +1,4 @@
-import * as css from '../scss/app.scss';
+import * as css from '../scss/index.scss';
 import $ from 'jquery';
 import jQuery from 'jquery';
 import 'jquery-validation';

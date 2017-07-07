@@ -10330,9 +10330,9 @@ return jQuery;
 "use strict";
 
 
-var _app = __webpack_require__(2);
+var _index = __webpack_require__(2);
 
-var css = _interopRequireWildcard(_app);
+var css = _interopRequireWildcard(_index);
 
 var _jquery = __webpack_require__(0);
 
