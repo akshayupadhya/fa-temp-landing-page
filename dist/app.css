@@ -45,6 +45,10 @@
   opacity: .9;
   min-height: 531px !important; }
 
+.textbox-div {
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7); }
+
 .main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -110,7 +114,8 @@
   margin: 0; }
 
 body {
-  min-height: 531px; }
+  min-height: 531px !important;
+  height: 100vh !important; }
 
 html {
   height: 100vh; }

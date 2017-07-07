@@ -10,7 +10,8 @@
 }
 body{
     //max-height: 100vh!important;
-    min-height: 531px;
+    min-height: 531px!important;
+    height: 100vh!important;
 }
 html{
     height: 100vh;
