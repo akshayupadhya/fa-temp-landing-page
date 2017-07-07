@@ -60,18 +60,18 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */,
-/* 1 */
+/******/ ({
+
+/***/ 4:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _contact = __webpack_require__(2);
+var _contact = __webpack_require__(5);
 
 var somecss = _interopRequireWildcard(_contact);
 
@@ -80,10 +80,12 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 console.log("contact page");
 
 /***/ }),
-/* 2 */
+
+/***/ 5:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ })
-/******/ ]);
+
+/******/ });

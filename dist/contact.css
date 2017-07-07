@@ -68,7 +68,8 @@ body {
 
 .back-div {
   width: 50%;
-  height: 100vh; }
+  height: 100vh;
+  min-height: 531px !important; }
 
 .second {
   height: 50%;
@@ -88,7 +89,8 @@ body {
 
 .black-div {
   background-color: #000;
-  opacity: .9; }
+  opacity: .9;
+  min-height: 531px !important; }
 
 .hundred {
   height: 100vh; }
@@ -108,10 +110,10 @@ body {
 
 .footer {
   width: 100%;
-  height: 12vh;
+  height: 12vh !important;
   color: whitesmoke;
-  position: absolute;
-  top: 88vh;
+  position: relative;
+  top: -115vh;
   z-index: 1000; }
 
 .social-icons ul {
